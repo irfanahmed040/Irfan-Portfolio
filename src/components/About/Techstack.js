@@ -1,144 +1,91 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { SiNextdotjs, SiSolidity } from "react-icons/si";
-import { FaRust } from "react-icons/fa";
-import Go from "../../Assets/TechIcons/go.svg";
-import C from "../../Assets/TechIcons/C++.svg";
-import Javascript from "../../Assets/TechIcons/Javascript.svg";
-import Node from "../../Assets/TechIcons/Node.svg";
-import ReactIcon from "../../Assets/TechIcons/React.svg";
-import HaskellIcon from "../../Assets/TechIcons/Haskell.svg";
-import Java from "../../Assets/TechIcons/Java.svg";
-import Python from "../../Assets/TechIcons/Python.svg";
-import Typescript from "../../Assets/TechIcons/Typescript.svg";
-import Git from "../../Assets/TechIcons/Git.svg";
-import Firebase from "../../Assets/TechIcons/Firebase.svg";
-import Redis from "../../Assets/TechIcons/Redis.svg";
-import Docker from "../../Assets/TechIcons/Docker.svg";
-import Mongo from "../../Assets/TechIcons/Mongo.svg";
-import SQL from "../../Assets/TechIcons/SQL.svg";
-import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
-import Redux from "../../Assets/TechIcons/Redux.svg";
-import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
-import MUI from "../../Assets/TechIcons/MUI.svg";
-import Postman from "../../Assets/TechIcons/Postman.svg";
-import AWS from "../../Assets/TechIcons/AWS.svg";
-import Kafka from "../../Assets/TechIcons/Kafka.svg";
+import { SiPython, SiC, SiMysql, SiPowerbi, SiArduino, SiHtml5, SiGithub, SiOpenai, SiFastapi, SiVercel, SiDocker } from "react-icons/si";
+import { FaRobot, FaCode, FaProjectDiagram, FaLink, FaBrain } from "react-icons/fa";
+import { BsStars, BsLightningChargeFill, BsChatSquareDotsFill } from "react-icons/bs";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={C} alt="C++" />
-        <div className="tech-icons-text">C++</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Javascript} alt="javascript" />
-        <div className="tech-icons-text">Javascript</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Typescript} alt="typescript" />
-        <div className="tech-icons-text">Javascript</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Go} alt="go" />
-        <div className="tech-icons-text">Go</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Node} alt="node" />
-        <div className="tech-icons-text">Node.Js</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={ReactIcon} alt="react" />
-        <div className="tech-icons-text">React.Js</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity fontSize={"24px"} />
-        <div className="tech-icons-text">Solidity</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Mongo} alt="mongoDb" />
-        <div className="tech-icons-text">Mongo DB</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Redux} alt="redux" />
-        <div className="tech-icons-text">Redux</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs fontSize={"24px"} />
-        <div className="tech-icons-text">Next.js</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Git} alt="git" />
-        <div className="tech-icons-text">Git</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Firebase} alt="firebase" />
-        <div className="tech-icons-text">Firebase</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Redis} alt="redis" />
-        <div className="tech-icons-text">Redis</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Docker} alt="docker" />
-        <div className="tech-icons-text">Docker</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Kubernates} alt="kubernetes" />
-        <div className="tech-icons-text">Kubernetes</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={SQL} alt="SQL" />
-        <div className="tech-icons-text">Postgresql</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Python} alt="Python" />
+        <SiPython fontSize={"40px"} />
         <div className="tech-icons-text">Python</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Java} alt="haskell" />
-        <div className="tech-icons-text">Java</div>
+        <FaLink fontSize={"40px"} />
+        <div className="tech-icons-text">Langchain</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={HaskellIcon} alt="haskell" />
-        <div className="tech-icons-text">Haskell</div>
+        <FaProjectDiagram fontSize={"40px"} />
+        <div className="tech-icons-text">n8n Automation</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Tailwind} alt="tailwind" />
-        <div className="tech-icons-text">Tailwind CSS</div>
+        <FaRobot fontSize={"40px"} />
+        <div className="tech-icons-text">Agentic AI</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <img src={MUI} alt="mui" />
-        <div className="tech-icons-text">Material UI</div>
+        <FaCode fontSize={"40px"} />
+        <div className="tech-icons-text">Claude Code</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Postman} alt="Postman" />
-        <div className="tech-icons-text">Postman</div>
+        <SiGithub fontSize={"40px"} />
+        <div className="tech-icons-text">Github</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <FaRust fontSize={"24px"} />
-        <div className="tech-icons-text">Rust</div>
+        <SiMysql fontSize={"40px"} />
+        <div className="tech-icons-text">MySQL</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <img src={AWS} alt="Postman" className="tech-icon-images" />
-        <div className="tech-icons-text">AWS</div>
+        <SiOpenai fontSize={"40px"} />
+        <div className="tech-icons-text">OpenAI API</div>
       </Col>
-
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Kafka} alt="Kafka" className="tech-icon-images" />
-        <div className="tech-icons-text">Kafka</div>
+        <FaBrain fontSize={"40px"} />
+        <div className="tech-icons-text">HuggingFace</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <BsLightningChargeFill fontSize={"40px"} />
+        <div className="tech-icons-text">Ollama</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiFastapi fontSize={"40px"} />
+        <div className="tech-icons-text">FastAPI</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <BsChatSquareDotsFill fontSize={"40px"} />
+        <div className="tech-icons-text">Prompt Engineering</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiVercel fontSize={"40px"} />
+        <div className="tech-icons-text">Vercel</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiDocker fontSize={"40px"} />
+        <div className="tech-icons-text">Docker</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <BsStars fontSize={"40px"} />
+        <div className="tech-icons-text">Vibe Coding</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiArduino fontSize={"40px"} />
+        <div className="tech-icons-text">Robotics</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiC fontSize={"40px"} />
+        <div className="tech-icons-text">C Programming</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHtml5 fontSize={"40px"} />
+        <div className="tech-icons-text">Web Development</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPowerbi fontSize={"40px"} />
+        <div className="tech-icons-text">PowerBI</div>
       </Col>
     </Row>
   );
 }
 
 export default Techstack;
+
