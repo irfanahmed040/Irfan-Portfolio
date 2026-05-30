@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import Robot3D from "./Robot3D";
+import logoImg from "../../Assets/HomeIMA.png";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -41,66 +42,74 @@ function Home() {
           }}
         />
 
-        {/* Three-column overlay:
-            left text | empty centre (robot) | right typewriter
-            All pointer-events: none so every mouse move hits the iframe */}
-        <div
+        {/* Logo to cover Spline watermark */}
+        <img
+          src={logoImg}
+          alt="logo"
+          style={{
+            position: "absolute",
+            bottom: 14,
+            right: 14,
+            width: "138px",
+            zIndex: 4,
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* Text overlay — responsive Bootstrap grid */}
+        <Container
+          fluid
           style={{
             position: "relative",
             zIndex: 3,
+            minHeight: "100vh",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
-            minHeight: "100vh",
-            padding: "80px 5% 0",
+            paddingTop: "80px",
             pointerEvents: "none",
           }}
         >
-          {/* LEFT — name / greeting */}
-          <div style={{ flex: "0 0 40%", textAlign: "left" }}>
-            <h1
-              style={{
-                paddingBottom: 15,
-                color: "white",
-                fontFamily: "'Orbitron', sans-serif",
-                fontWeight: 600,
-                letterSpacing: "0.05em",
-              }}
-              className="heading"
-            >
-              Hi There!{" "}
-              <span className="wave" role="img" aria-labelledby="wave">
-                👋🏻
-              </span>
-            </h1>
-            <h1
-              className="heading-name"
-              style={{
-                color: "white",
-                fontFamily: "'Orbitron', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.03em",
-              }}
-            >
-              I'm
-              <strong className="main-name"> Irfan Mohammed Ahmed</strong>
-            </h1>
-          </div>
+          <Row className="w-100 align-items-center">
+            {/* LEFT — name / greeting */}
+            <Col xs={12} md={4} style={{ textAlign: "left", marginBottom: "20px" }}>
+              <h1
+                style={{
+                  paddingBottom: 15,
+                  color: "white",
+                  fontFamily: "'Orbitron', sans-serif",
+                  fontWeight: 600,
+                  letterSpacing: "0.05em",
+                }}
+                className="heading"
+              >
+                Hi There!{" "}
+                <span className="wave" role="img" aria-labelledby="wave">
+                  👋🏻
+                </span>
+              </h1>
+              <h1
+                className="heading-name"
+                style={{
+                  color: "white",
+                  fontFamily: "'Orbitron', sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: "0.03em",
+                }}
+              >
+                I'm
+                <strong className="main-name"> Irfan Mohammed Ahmed</strong>
+              </h1>
+            </Col>
 
-          {/* CENTRE — empty so the robot shows through */}
-          <div style={{ flex: "0 0 38%" }} />
+            {/* CENTRE — empty on desktop so robot shows through, hidden on mobile */}
+            <Col md={4} className="d-none d-md-block" />
 
-          {/* RIGHT — typewriter roles */}
-          <div
-            style={{
-              flex: "0 0 25%",
-              textAlign: "left",
-              pointerEvents: "auto",
-            }}
-          >
-            <Type />
-          </div>
-        </div>
+            {/* RIGHT — typewriter */}
+            <Col xs={12} md={4} style={{ textAlign: "left", pointerEvents: "auto" }}>
+              <Type />
+            </Col>
+          </Row>
+        </Container>
       </div>
 
       <Home2 />

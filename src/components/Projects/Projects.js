@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
+import thyroidImg from "../../Assets/Projects/thyroid.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
 import doctorImg from "../../Assets/Projects/doctor.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 import robotImg from "../../Assets/Projects/robot.png";
@@ -19,7 +19,7 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "rgb(180,180,180)", fontFamily: "'Raleway', sans-serif", marginBottom: "40px" }}>
-          A selection of projects spanning AI automation, deep learning, hardware engineering, and data analytics.
+          From production AI systems built during my internship to published research and hands-on hardware builds — here's what I've been working on.
         </p>
 
         <Row>
@@ -49,7 +49,6 @@ function Projects() {
           <Col md={12}>
             <ProjectCard
               imgPath={editor}
-              imgHeight="320px"
               title="Engineering Manager Bot"
               tags={["Agentic AI", "RAG", "BigQuery", "Multi-LLM", "Internship Project"]}
               description="Built during my internship at Tericsoft, this is a production-grade engineering intelligence platform that gives managers natural language access to their entire team's performance data — across GitHub, Jira, Keka HR, WhatsApp, and Microsoft Teams — all queried live from 35 BigQuery tables. The system orchestrates four specialised AI models, each chosen for what it does best: LightRAG + Llama 4 Scout for knowledge graph retrieval, Gemini 2.5 Flash for SQL generation and auto-repair, and Mistral Large for visualization planning. Ask it 'who had the most commits last week?' and it retrieves schema context, writes validated SQL, executes it against live BigQuery data, returns a natural language answer, and generates charts — all in a single conversational turn."
@@ -71,6 +70,7 @@ function Projects() {
           <Col md={12}>
             <ProjectCard
               imgPath={doctorImg}
+              imgFit="contain"
               title="AI Voice Appointment Booking Agent"
               tags={["Voice AI", "ElevenLabs", "Make.com", "Automation", "Cal.com"]}
               description="A fully conversational voice agent that handles end-to-end doctor appointment booking — no forms, no hold music, no manual scheduling. Patients speak naturally to the agent, which checks real-time slot availability, collects their details through guided dialogue, reads everything back for confirmation, and books the appointment — all without any human on the clinic's side. Built with a custom patient-facing frontend for a doctor's clinic, the entire pipeline runs on two Make.com automation scenarios wired together through ElevenLabs tool calls and Cal.com's scheduling API."
@@ -88,10 +88,35 @@ function Projects() {
             />
           </Col>
 
+          {/* ── Car Dealership Post-Purchase Survey ── */}
+          <Col md={12}>
+            <ProjectCard
+              imgPath={editor}
+              imgFit="contain"
+              title="Voice Agent — Car Dealership Post-Purchase Survey"
+              tags={["Voice AI", "ElevenLabs", "Make.com", "Twilio", "Automation"]}
+              description="A fully automated post-purchase feedback system for a car dealership. The moment a customer's details are added to Google Sheets, the system automatically calls them, addresses them by name, references the exact car they bought, and collects structured feedback — all without any human involvement. No manual follow-up calls, no email surveys with low open rates — just a personalized AI voice call that feels like a real dealership rep reaching out."
+              features={[
+                "Google Sheets as the trigger — staff adds a customer row with name, phone, car model, and purchase date; Make.com detects the new row and kicks off the entire pipeline instantly",
+                "Fully personalized opening — agent greets the customer by name, mentions the specific car model and purchase date pulled live from the sheet before the call is even placed",
+                "3-question structured survey — overall satisfaction score (1–10), sales process feedback, and open suggestions — all captured through natural voice conversation",
+                "Two Make.com scenarios — one for outbound calling (reads Sheet2, fires ElevenLabs API via Twilio, updates status to 'Called'), one for data collection (receives post-call webhook, extracts transcript, summary, duration, recording URL, logs to Sheet1)",
+                "ElevenLabs voice agent powered by Gemini 2.5 Flash — calls placed through a Twilio number, with the agent personalised per call using customer data passed as dynamic variables",
+                "Full call logging — every completed call writes the complete transcript, AI-generated summary, duration, and recording URL to Google Sheets automatically",
+                "Twilio phone routing — single +1 number handles all outbound calls, scalable from 1 customer to 1000 with zero additional configuration",
+              ]}
+              techStack={["ElevenLabs", "Make.com", "Google Sheets", "Twilio", "Gemini 2.5 Flash", "Webhooks"]}
+              demoVideo="https://drive.google.com/file/d/1tHY-4s50FaOYREoo2Sm4IulfliPRvfKb/preview"
+              demoVideoLabel="Listen to Demo Call"
+              demoType="audio"
+            />
+          </Col>
+
           {/* ── Thyroid Cancer Detection ── */}
           <Col md={12}>
             <ProjectCard
-              imgPath={leaf}
+              imgPath={thyroidImg}
+              imgFit="contain"
               title="Thyroid Cancer Detection"
               tags={["Deep Learning", "Computer Vision", "Research"]}
               description="A deep learning model using a Bilinear CNN (dual VGG16 architecture) for classifying thyroid nodules in ultrasound images based on the TIRADS scoring system. Research paper accepted and published in the Proceedings of ICICC-2025 by Springer."
@@ -127,7 +152,8 @@ function Projects() {
           {/* ── Racing Simulator ── */}
           <Col md={12}>
             <ProjectCard
-              imgPath={chatify}
+              imgPath={leaf}
+              imgFit="fill"
               title="Racing Simulator for Gaming Console"
               tags={["Hardware", "Electronics", "DIY"]}
               description="A custom-built racing simulator peripheral using a gaming controller motherboard. Features a handcrafted steering wheel with paddle shifters, control buttons, and sensitive potentiometer-based pedals — delivering a realistic sim-racing experience at a fraction of commercial product costs."

@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { SiPython, SiC, SiMysql, SiPowerbi, SiArduino, SiHtml5, SiGithub, SiOpenai, SiFastapi, SiVercel, SiDocker } from "react-icons/si";
-import { FaRobot, FaCode, FaProjectDiagram, FaLink, FaBrain } from "react-icons/fa";
+import { FaRobot, FaCode, FaProjectDiagram, FaLink, FaBrain, FaCogs } from "react-icons/fa";
 import { BsStars, BsLightningChargeFill, BsChatSquareDotsFill } from "react-icons/bs";
 
 function Techstack() {
@@ -66,6 +66,10 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <BsStars fontSize={"40px"} />
         <div className="tech-icons-text">Vibe Coding</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaCogs fontSize={"40px"} />
+        <div className="tech-icons-text">Make.com</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiArduino fontSize={"40px"} />

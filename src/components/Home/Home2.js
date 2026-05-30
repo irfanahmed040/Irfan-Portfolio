@@ -36,10 +36,13 @@ function Home2() {
                 Generative AI meets automation
               </b>{" "}
               — building multi-agent systems that can reason, retrieve, and act
-              autonomously. I work across the full stack of AI development, from
-              prompt engineering and model integration to{" "}
-              <b className="purple">FastAPI backends</b>{" "}
-              <b className="purple"></b>.
+              autonomously. This extends to{" "}
+              <b className="purple">voice AI agents</b> too — conversational
+              systems that handle real-world tasks like appointment booking and
+              customer feedback calls over the phone, without any human in the
+              loop. I work across the full stack of AI development, from prompt
+              engineering and model integration to{" "}
+              <b className="purple">FastAPI backends</b>.
               <br />
               <br />
               Outside of software, I love delving into the physical world —

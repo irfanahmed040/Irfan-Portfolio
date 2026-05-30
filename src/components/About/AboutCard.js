@@ -46,6 +46,13 @@ function AboutCard() {
               automated, I'll build the agent that does it better than a human
             </li>
             <li className="about-activity">
+              <ImPointRight /> Built{" "}
+              <span className="purple">AI voice agents</span> that make real
+              phone calls — booking appointments, collecting post-purchase
+              feedback, and handling full conversations autonomously via
+              ElevenLabs + Twilio, orchestrated through Make.com
+            </li>
+            <li className="about-activity">
               <ImPointRight /> Always exploring the bleeding edge —{" "}
               <span className="purple">
                 multi-agent systems, RAG pipelines, and AI tool orchestration

@@ -28,7 +28,7 @@ function ProjectCards(props) {
             style={{
               width: "100%",
               borderRadius: "12px",
-              objectFit: "cover",
+              objectFit: props.imgFit || "cover",
               maxHeight: props.imgHeight || "220px",
               border: "1px solid rgba(199,112,240,0.2)",
             }}
@@ -134,8 +134,8 @@ function ProjectCards(props) {
                 }}
               >
                 {showVideo
-                  ? <><BsXCircleFill /> &nbsp; Close Demo</>
-                  : <><BsPlayCircleFill /> &nbsp; Watch Demo</>
+                  ? <><BsXCircleFill /> &nbsp; Close {props.demoVideoLabel || "Demo"}</>
+                  : <><BsPlayCircleFill /> &nbsp; {props.demoVideoLabel || "Watch Demo"}</>
                 }
               </Button>
             )}
@@ -188,23 +188,34 @@ function ProjectCards(props) {
             <BsPlayCircleFill size={13} />
             Live Demo — {props.title}
           </div>
-          {/* 16:9 responsive iframe */}
-          <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
-            <iframe
-              src={props.demoVideo}
-              title={`${props.title} demo`}
-              allow="autoplay"
-              allowFullScreen
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: "none",
-              }}
-            />
-          </div>
+          {/* Audio: compact player / Video: 16:9 frame */}
+          {props.demoType === "audio" ? (
+            <div style={{ padding: "16px" }}>
+              <iframe
+                src={props.demoVideo}
+                title={`${props.title} demo`}
+                allow="autoplay"
+                style={{ width: "100%", height: "80px", border: "none" }}
+              />
+            </div>
+          ) : (
+            <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+              <iframe
+                src={props.demoVideo}
+                title={`${props.title} demo`}
+                allow="autoplay"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -10,7 +10,8 @@ function Type() {
           "n8n Automations Builder",
           "Python Developer",
           "Agentic AI Developer",
-          "Robotics Enthusiast",
+          "AI Voice Agents Builder",
+          "Robotics Enthusiast"
 
         ],
         autoStart: true,
