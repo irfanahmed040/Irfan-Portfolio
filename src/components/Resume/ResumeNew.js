@@ -8,7 +8,7 @@ import resumePdf from "../../Assets/Irfan.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [numPages, setNumPages] = useState(null);
+  const [, setNumPages] = useState(null);
 
   return (
     <div id="resume">
