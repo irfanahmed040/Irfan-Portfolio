@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import thyroidImg from "../../Assets/Projects/thyroid.png";
 import editor from "../../Assets/Projects/codeEditor.png";
@@ -13,10 +12,9 @@ import robotImg from "../../Assets/Projects/robot.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "rgb(180,180,180)", fontFamily: "'Raleway', sans-serif", marginBottom: "40px" }}>
           From production AI systems built during my internship to published research and hands-on hardware builds — here's what I've been working on.
@@ -29,14 +27,12 @@ function Projects() {
               imgPath={bitsOfCode}
               title="SEO Blog Agent"
               tags={["n8n", "Agentic AI", "LLM", "Automation", "Internship"]}
-              description="Built during my internship at Tericsoft, where it was actively used to research, write, and publish SEO blogs on tericsoft.com. Most SEO content pipelines are either fully manual or produce generic AI output — this sits in between. A fully automated n8n workflow that researches, plans, writes, and publishes a blog post while keeping a human in control at the decisions that actually matter. Feed it a keyword and walk away; come back to a structured, research-backed draft ready to review and go live."
+              description="Independently designed and built for Tericsoft, where it was actively used to publish SEO blogs on tericsoft.com. A fully automated n8n workflow that researches, plans, writes, and publishes blog posts — with human review kept at the decisions that actually matter."
               features={[
-                "Built in production at Tericsoft — not a side project, actively used to publish content on tericsoft.com",
-                "Chat-based input — collects keyword, audience, search intent, and location through natural conversation",
-                "Live SERP + competitor analysis via DataForSEO — scrapes and summarises the top-ranking pages before writing a single word",
-                "Multi-stage keyword research across 100+ candidates — difficulty scoring, intent classification, and 3-month trend analysis",
+                "Production use at Tericsoft — content researched, written, and published live on tericsoft.com",
+                "Live SERP + competitor analysis via DataForSEO — top-ranking pages scraped and analysed before writing a single word",
                 "Multi-model pipeline — LLaMA 3.1 8B for extraction, GPT-4.1 mini for filtering, GPT-4.1 for strategy and final writing",
-                "Human review at two checkpoints — approve or edit the content plan before the blog is written, then again before it goes live",
+                "Human-in-the-loop at two checkpoints — content plan and final blog both reviewed before publishing",
               ]}
               techStack={["n8n", "GPT-4.1", "GPT-4.1 mini", "LLaMA 3.1 8B", "Groq", "DataForSEO", "Google Sheets", "GitHub Gists", "Notion", "JavaScript"]}
               ghLink="https://github.com/irfanahmed040/n8n-Blog-Writing-Workflow"
@@ -51,15 +47,12 @@ function Projects() {
               imgPath={editor}
               title="Engineering Manager Bot"
               tags={["Agentic AI", "RAG", "BigQuery", "Multi-LLM", "Internship Project"]}
-              description="Built during my internship at Tericsoft, this is a production-grade engineering intelligence platform that gives managers natural language access to their entire team's performance data — across GitHub, Jira, Keka HR, WhatsApp, and Microsoft Teams — all queried live from 35 BigQuery tables. The system orchestrates four specialised AI models, each chosen for what it does best: LightRAG + Llama 4 Scout for knowledge graph retrieval, Gemini 2.5 Flash for SQL generation and auto-repair, and Mistral Large for visualization planning. Ask it 'who had the most commits last week?' and it retrieves schema context, writes validated SQL, executes it against live BigQuery data, returns a natural language answer, and generates charts — all in a single conversational turn."
+              description="Built a platform that gives engineering managers at tericsoft natural language access to team performance data across GitHub, Jira, Keka HR, and more, queried live from 35 BigQuery tables. Four AI models work in sequence to retrieve schema, generate SQL, execute queries, and visualise results in a single conversational turn."
               features={[
-                "Two modes in one app — a static 11-chart analytics dashboard (productivity scores, code churn treemaps, department radar charts, risk register) and a freeform NL→SQL conversational chat interface",
-                "4-model AI orchestration — LightRAG (schema retrieval) → Gemini 2.5 Flash (SQL generation) → BigQuery (execution) → Mistral Large (chart planning) — each model doing only what it's best at",
-                "NL→SQL with auto-repair loop — SQL is dry-run validated against BigQuery before execution; if it fails, Gemini auto-repairs it and retries up to 5 times before gracefully giving up",
-                "Knowledge graph RAG over 35 BigQuery tables — retrieves only the relevant schema chunks per question, keeping prompts lean and SQL accurate without flooding context with the full schema",
-                "Conversational memory across 3 turns — resolves pronouns, carries over date filters, and extends previous queries so follow-up questions work naturally without re-specifying context",
-                "Schema-only visualization pipeline — Mistral sees column names and types, never raw rows; it returns aggregation specs that Python executes before Plotly renders — eliminates axis hallucination entirely",
-                "Custom LoopAgnosticLock — engineered a fix for a fundamental asyncio conflict where LightRAG's module-level locks were binding to the wrong Streamlit event loop, causing silent RuntimeErrors across pages",
+                "Two modes — an 11-chart analytics dashboard (productivity scores, code churn, risk register) and a freeform NL→SQL chat interface",
+                "4-model pipeline — LightRAG retrieval → Gemini 2.5 Flash SQL generation → BigQuery execution → Mistral Large visualisation",
+                "Auto-repair SQL loop — dry-run validated against BigQuery, auto-fixed by Gemini up to 5 times on failure",
+                "Custom LoopAgnosticLock — solved an asyncio conflict where LightRAG's module-level locks bound to the wrong Streamlit event loop across pages",
               ]}
               techStack={["Python", "Streamlit", "LightRAG", "Llama 4 Scout", "Gemini 2.5 Flash", "Mistral Large", "Groq", "Google BigQuery", "SentenceTransformers", "Plotly", "asyncio"]}
               confidential={true}
@@ -73,15 +66,12 @@ function Projects() {
               imgFit="contain"
               title="AI Voice Appointment Booking Agent"
               tags={["Voice AI", "ElevenLabs", "Make.com", "Automation", "Cal.com"]}
-              description="A fully conversational voice agent that handles end-to-end doctor appointment booking — no forms, no hold music, no manual scheduling. Patients speak naturally to the agent, which checks real-time slot availability, collects their details through guided dialogue, reads everything back for confirmation, and books the appointment — all without any human on the clinic's side. Built with a custom patient-facing frontend for a doctor's clinic, the entire pipeline runs on two Make.com automation scenarios wired together through ElevenLabs tool calls and Cal.com's scheduling API."
+              description="A conversational voice agent handling end-to-end doctor appointment booking. Patients speak naturally — the agent checks slot availability, collects details, confirms everything back, and books — no human involvement required on the clinic's side."
               features={[
-                "Conversational voice interface via ElevenLabs — patients describe when they'd like an appointment in natural speech, no typing or form-filling required",
-                "Real-time slot checking via a check_availability tool — the agent calls Make.com's first scenario through a webhook, which queries Cal.com and returns the nearest available time slot",
-                "Guided patient detail collection — after slot confirmation, the agent conversationally collects full name, email address, and phone number through natural dialogue",
-                "Confirmation loop before booking — agent reads all collected details back to the patient and waits for explicit verbal approval before making any booking",
-                "book_appointment tool call triggers Make.com's second scenario — creates the confirmed appointment in Cal.com and returns booking confirmation details back to the patient in real time",
-                "Two independent Make.com scenarios — one dedicated to availability checking, one to booking — each triggered by separate ElevenLabs tool calls, keeping the automation clean and modular",
-                "Custom clinic frontend — a patient-facing web interface designed specifically for the doctor's clinic, giving it a professional branded experience",
+                "check_availability tool triggers a Make.com webhook → queries Cal.com → returns the nearest open slot in real time",
+                "Guided detail collection and confirmation — agent gathers name, email, and phone, reads it back, and waits for verbal approval before booking",
+                "book_appointment tool triggers a second Make.com scenario — creates the appointment in Cal.com and confirms details to the patient",
+                "Custom patient-facing clinic frontend — built specifically for the doctor's clinic with a branded experience",
               ]}
               techStack={["ElevenLabs", "Make.com", "Cal.com", "Webhooks", "HTML/CSS/JS"]}
               demoVideo="https://drive.google.com/file/d/1QDX9KHOsEtiCych9ODAjbhwHGFU9NuCn/preview"
@@ -95,15 +85,12 @@ function Projects() {
               imgFit="contain"
               title="Voice Agent — Car Dealership Post-Purchase Survey"
               tags={["Voice AI", "ElevenLabs", "Make.com", "Twilio", "Automation"]}
-              description="A fully automated post-purchase feedback system for a car dealership. The moment a customer's details are added to Google Sheets, the system automatically calls them, addresses them by name, references the exact car they bought, and collects structured feedback — all without any human involvement. No manual follow-up calls, no email surveys with low open rates — just a personalized AI voice call that feels like a real dealership rep reaching out."
+              description="A fully automated post-purchase feedback system for a car dealership. Staff adds a customer row to Google Sheets and the system automatically calls them — personalized with their name and car — to collect structured feedback, with no human involvement after the sale."
               features={[
-                "Google Sheets as the trigger — staff adds a customer row with name, phone, car model, and purchase date; Make.com detects the new row and kicks off the entire pipeline instantly",
-                "Fully personalized opening — agent greets the customer by name, mentions the specific car model and purchase date pulled live from the sheet before the call is even placed",
-                "3-question structured survey — overall satisfaction score (1–10), sales process feedback, and open suggestions — all captured through natural voice conversation",
-                "Two Make.com scenarios — one for outbound calling (reads Sheet2, fires ElevenLabs API via Twilio, updates status to 'Called'), one for data collection (receives post-call webhook, extracts transcript, summary, duration, recording URL, logs to Sheet1)",
-                "ElevenLabs voice agent powered by Gemini 2.5 Flash — calls placed through a Twilio number, with the agent personalised per call using customer data passed as dynamic variables",
-                "Full call logging — every completed call writes the complete transcript, AI-generated summary, duration, and recording URL to Google Sheets automatically",
-                "Twilio phone routing — single +1 number handles all outbound calls, scalable from 1 customer to 1000 with zero additional configuration",
+                "Google Sheets trigger — Make.com detects new rows and fires personalised outbound calls via ElevenLabs + Twilio instantly",
+                "Calls personalised per customer — agent addresses them by name and references their specific car model and purchase date",
+                "3-question voice survey — satisfaction score (1–10), sales process feedback, and open suggestions captured conversationally",
+                "Full auto-logging — transcript, AI-generated summary, duration, and recording URL written to Google Sheets after every call",
               ]}
               techStack={["ElevenLabs", "Make.com", "Google Sheets", "Twilio", "Gemini 2.5 Flash", "Webhooks"]}
               demoVideo="https://drive.google.com/file/d/1tHY-4s50FaOYREoo2Sm4IulfliPRvfKb/preview"

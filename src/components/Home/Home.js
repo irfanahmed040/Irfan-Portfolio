@@ -5,6 +5,8 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import Robot3D from "./Robot3D";
 import logoImg from "../../Assets/HomeIMA.png";
+import Projects from "../Projects/Projects";
+import ResumeNew from "../Resume/ResumeNew";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -113,6 +115,16 @@ function Home() {
       </div>
 
       <Home2 />
+
+      {/* Projects Section */}
+      <div id="projects">
+        <Projects />
+      </div>
+
+      {/* Resume Section */}
+      <div id="resume">
+        <ResumeNew />
+      </div>
 
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>

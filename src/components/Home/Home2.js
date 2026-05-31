@@ -15,7 +15,7 @@ function Home2() {
 
             <p
               className="home-about-body"
-              style={{ fontFamily: "'Raleway', sans-serif", lineHeight: "1.9" }}
+              style={{ fontFamily: "'Raleway', sans-serif", lineHeight: "1.9", textAlign: "justify" }}
             >
               I'm an <b className="purple">AI Engineer</b> who builds systems
               that work in the real world — not just in notebooks. My focus is
@@ -23,12 +23,12 @@ function Home2() {
               solutions that save time and create measurable impact.
               <br />
               <br />
-              Currently interning at{" "}
-              <b className="purple">Tericsoft</b>, where I design and ship
-              end-to-end intelligent pipelines — combining{" "}
-              <b className="purple">LLMs, LangChain, RAG systems</b>, and{" "}
-              <b className="purple">n8n Agentic Workflows</b> to automate
-              processes that used to require hours of manual effort.
+              <b className="purple">Experience: </b>
+              AI & Automations Intern at{" "}
+              <b className="purple">Tericsoft Technology Solutions</b> — designing and shipping
+              end-to-end intelligent pipelines combining{" "}
+              <b className="purple">LLMs, RAG systems, voice AI agents</b>, and{" "}
+              <b className="purple">n8n Agentic Workflows</b> used in production.<b className="purple"> (Feb 2026 - Present)</b>
               <br />
               <br />
               I'm particularly drawn to the space where{" "}
@@ -56,7 +56,7 @@ function Home2() {
             <Row style={{ marginTop: "30px", gap: "10px 0" }}>
               {[
                 { label: "Focus", value: "Agentic AI & Automation" },
-                { label: "Currently", value: "AI Intern @ Tericsoft" },
+                { label: "Experience", value: "AI Intern - Tericsoft" },
                 { label: "Degree", value: "B.Tech AI — VJIT (2026)" },
                 { label: "Based In", value: "Hyderabad, India" },
               ].map((item) => (
