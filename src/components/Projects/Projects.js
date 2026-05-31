@@ -25,7 +25,7 @@ function Projects() {
           <Col md={12}>
             <ProjectCard
               imgPath={bitsOfCode}
-              title="SEO Blog Agent"
+              title="Autonomous SEO Blog Research & Content Writing Pipeline"
               tags={["n8n", "Agentic AI", "LLM", "Automation", "Internship"]}
               description="Independently designed and built for Tericsoft, where it was actively used to publish SEO blogs on tericsoft.com. A fully automated n8n workflow that researches, plans, writes, and publishes blog posts — with human review kept at the decisions that actually matter."
               features={[
@@ -45,7 +45,7 @@ function Projects() {
           <Col md={12}>
             <ProjectCard
               imgPath={editor}
-              title="Engineering Manager Bot"
+              title="AI-Powered Engineering Team Analytics Platform"
               tags={["Agentic AI", "RAG", "BigQuery", "Multi-LLM", "Internship Project"]}
               description="Built a platform that gives engineering managers at tericsoft natural language access to team performance data across GitHub, Jira, Keka HR, and more, queried live from 35 BigQuery tables. Four AI models work in sequence to retrieve schema, generate SQL, execute queries, and visualise results in a single conversational turn."
               features={[
@@ -64,7 +64,7 @@ function Projects() {
             <ProjectCard
               imgPath={doctorImg}
               imgFit="contain"
-              title="AI Voice Appointment Booking Agent"
+              title="Doctor Appointment Booking AI Voice Agent with Real-Time Availability Check"
               tags={["Voice AI", "ElevenLabs", "Make.com", "Automation", "Cal.com"]}
               description="A conversational voice agent handling end-to-end doctor appointment booking. Patients speak naturally — the agent checks slot availability, collects details, confirms everything back, and books — no human involvement required on the clinic's side."
               features={[
@@ -83,7 +83,7 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               imgFit="contain"
-              title="Voice Agent — Car Dealership Post-Purchase Survey"
+              title="AI Outbound Call Agent for Dealership Post-Purchase Follow-Ups"
               tags={["Voice AI", "ElevenLabs", "Make.com", "Twilio", "Automation"]}
               description="A fully automated post-purchase feedback system for a car dealership. Staff adds a customer row to Google Sheets and the system automatically calls them — personalized with their name and car — to collect structured feedback, with no human involvement after the sale."
               features={[
@@ -104,7 +104,7 @@ function Projects() {
             <ProjectCard
               imgPath={thyroidImg}
               imgFit="contain"
-              title="Thyroid Cancer Detection"
+              title="Thyroid Cancer Detection - Bilinear CNN"
               tags={["Deep Learning", "Computer Vision", "Research"]}
               description="A deep learning model using a Bilinear CNN (dual VGG16 architecture) for classifying thyroid nodules in ultrasound images based on the TIRADS scoring system. Research paper accepted and published in the Proceedings of ICICC-2025 by Springer."
               features={[
