@@ -38,6 +38,8 @@ function Projects() {
               ghLink="https://github.com/irfanahmed040/n8n-Blog-Writing-Workflow"
               demoLink="https://fanatical-fog-322.notion.site/SEO-Automation-2f611c48ddd7807393a1d2d872b47264?pvs=74"
               demoLabel="Notion Docs"
+              demoVideo="https://drive.google.com/file/d/1M7CDPYNlVqN9M83QZpv5wfRECyHTdta_/preview"
+              demoVideoLabel="Watch Promotional Video"
             />
           </Col>
 
