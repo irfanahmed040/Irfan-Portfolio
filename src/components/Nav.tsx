@@ -4,8 +4,8 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { identity } from "@/data/profile";
 
 const LINKS = [
-  { href: "#work", label: "Projects" },
   { href: "#about", label: "About" },
+  { href: "#work", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#log", label: "Experience" },
   { href: "#contact", label: "Contact" },

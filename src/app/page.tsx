@@ -15,8 +15,8 @@ export default function Page() {
       <Nav />
       <main>
         <Hero />
-        <Work />
         <About />
+        <Work />
         <Skills />
         <Timeline />
         <Contact />

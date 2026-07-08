@@ -8,7 +8,7 @@ import StreamingText from "@/components/ui/StreamingText";
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
-      <SectionHeading index="02" label="the human in the loop" title="About" />
+      <SectionHeading index="01" label="the human in the loop" title="About" />
 
       <div className="grid gap-10 md:grid-cols-[1.6fr_1fr]">
         {/* terminal-framed streaming bio */}
