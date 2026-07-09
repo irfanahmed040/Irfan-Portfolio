@@ -80,13 +80,13 @@ function Sim({ count }: SimProps) {
     const delta = Math.min(rawDelta, 0.05);
     const mx = (pointer.x * viewport.width) / 2;
     const my = (pointer.y * viewport.height) / 2;
-    const repelR = 2.2;
+    const repelR = 1.4;
     const repelR2 = repelR * repelR;
 
     const b = burst.current;
     const bursting = b.t > 0;
     if (bursting) b.t -= delta;
-    const burstR = 3.6;
+    const burstR = 2.4;
     const burstR2 = burstR * burstR;
     const burstDecay = bursting ? b.t / 0.5 : 0;
 
@@ -99,7 +99,7 @@ function Sim({ count }: SimProps) {
       // repel from cursor
       if (d2 < repelR2 && d2 > 0.0001) {
         const d = Math.sqrt(d2);
-        const f = ((repelR - d) / repelR) * 14;
+        const f = ((repelR - d) / repelR) * 7;
         vel[ix] += (dx / d) * f * delta;
         vel[ix + 1] += (dy / d) * f * delta;
       }
@@ -111,7 +111,7 @@ function Sim({ count }: SimProps) {
         const bd2 = bx * bx + by * by;
         if (bd2 < burstR2 && bd2 > 0.0001) {
           const bd = Math.sqrt(bd2);
-          const bf = ((burstR - bd) / burstR) * 95 * burstDecay;
+          const bf = ((burstR - bd) / burstR) * 45 * burstDecay;
           vel[ix] += (bx / bd) * bf * delta;
           vel[ix + 1] += (by / bd) * bf * delta;
         }
