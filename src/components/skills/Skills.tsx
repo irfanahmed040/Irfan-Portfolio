@@ -114,7 +114,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
-      <SectionHeading index="03" label="the toolchain" title="Skill Graph" />
+      <SectionHeading index="04" label="the toolchain" title="Skill Graph" />
 
       {/* ── desktop: constellation ── */}
       <div className="relative hidden md:block">

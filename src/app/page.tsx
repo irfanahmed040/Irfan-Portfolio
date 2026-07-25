@@ -16,9 +16,9 @@ export default function Page() {
       <main>
         <Hero />
         <About />
+        <Timeline />
         <Work />
         <Skills />
-        <Timeline />
         <Contact />
       </main>
       <Terminal />

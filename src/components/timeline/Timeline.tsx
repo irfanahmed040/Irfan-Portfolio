@@ -46,7 +46,7 @@ export default function Timeline() {
 
   return (
     <section id="log" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
-      <SectionHeading index="04" label="where the work happens" title="Experience" />
+      <SectionHeading index="02" label="where the work happens" title="Experience" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -83,20 +83,9 @@ export default function Timeline() {
           />
 
           <div className="relative p-8 md:p-12">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <p className="font-mono text-xs tracking-[0.22em] text-coral uppercase">
-                {job.period}
-              </p>
-              <span className="flex items-center gap-2 rounded-full border border-coral/40 bg-coral-soft px-3 py-1 font-mono text-[10px] tracking-widest text-coral uppercase">
-                <span className="relative flex size-1.5" aria-hidden>
-                  <span
-                    className={`absolute inline-flex size-full rounded-full bg-coral ${reduced ? "" : "animate-ping"}`}
-                  />
-                  <span className="relative inline-flex size-1.5 rounded-full bg-coral" />
-                </span>
-                current
-              </span>
-            </div>
+            <p className="font-mono text-xs tracking-[0.22em] text-coral uppercase">
+              {job.period}
+            </p>
 
             <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight text-ink md:text-5xl">
               {job.title}

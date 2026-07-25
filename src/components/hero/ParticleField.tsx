@@ -118,10 +118,10 @@ function Sim({ count }: SimProps) {
       }
 
       // spring home + damping
-      vel[ix] += (home[ix] - pos[ix]) * 1.6 * delta;
-      vel[ix + 1] += (home[ix + 1] - pos[ix + 1]) * 1.6 * delta;
-      vel[ix] *= 0.94;
-      vel[ix + 1] *= 0.94;
+      vel[ix] += (home[ix] - pos[ix]) * 3.2 * delta;
+      vel[ix + 1] += (home[ix + 1] - pos[ix + 1]) * 3.2 * delta;
+      vel[ix] *= 0.9;
+      vel[ix + 1] *= 0.9;
 
       pos[ix] += vel[ix] * delta * 60 * 0.016;
       pos[ix + 1] += vel[ix + 1] * delta * 60 * 0.016;

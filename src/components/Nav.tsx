@@ -5,9 +5,9 @@ import { identity } from "@/data/profile";
 
 const LINKS = [
   { href: "#about", label: "About" },
+  { href: "#log", label: "Experience" },
   { href: "#work", label: "Projects" },
   { href: "#skills", label: "Skills" },
-  { href: "#log", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
 
