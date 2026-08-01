@@ -336,11 +336,11 @@ export type TimelineEntry = {
 export const timeline: TimelineEntry[] = [
   {
     period: "Feb 2026 — July 2026",
-    title: "AI & Automations Engineer",
+    title: "AI & Automations Intern",
     org: "Tericsoft Technology Solutions, Hyderabad",
     kind: "work",
     points: [
-      "Officially engaged as an AI & Automations Engineer within Tericsoft's engineering team, developing automation workflows and intelligent agent systems for internal operations and client-facing products",
+      "Officially engaged as an AI & Automations Intern within Tericsoft's engineering team, developing automation workflows and intelligent agent systems for internal operations and client-facing products",
       "Built and deployed agentic pipelines integrating LLMs, voice AI, and data platforms across multiple production projects under Tericsoft's engineering umbrella",
       "Built an internal AI chatbot that acts as a virtual Engineering Manager with access to company-wide engineering data, used by the CTO to understand team performance and manage the entire engineering organization",
       "Built an end-to-end n8n automation workflow that performs competitor analysis and keyword research, then auto-generates SEO-optimized blog content for publishing on the company website — reducing manual content research and drafting time",
