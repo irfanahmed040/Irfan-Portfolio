@@ -50,7 +50,7 @@ export const about = {
     "I'm an AI engineer who builds systems that work in the real world — not just in notebooks. My focus is the space where generative AI meets automation: multi-agent systems that reason, retrieve, and act on their own. I've shipped voice agents that make real phone calls — booking appointments, running feedback surveys — with no human in the loop, and agentic pipelines that turned multi-hour manual processes into minutes. I work across the full stack of AI development, from prompt engineering and model integration to FastAPI backends. Off the keyboard, I build robotic arms and racing simulators — hardware fused with intelligent control.",
   facts: [
     { label: "Focus", value: "Agentic AI & Automation" },
-    { label: "Currently", value: "AI Intern @ Tericsoft" },
+    { label: "Status", value: "Open to AI engineering roles" },
     { label: "Degree", value: "B.Tech AI — VJIT '26" },
     { label: "Based in", value: "Hyderabad, India" },
   ],

@@ -41,7 +41,7 @@ function buildResponse(raw: string): { lines: Line[]; action?: () => void } {
           out(`${identity.name} — AI engineer, ${identity.location}`, "accent"),
           out(identity.headline),
           out(identity.subline),
-          out(`currently: AI & Automations Intern @ Tericsoft`),
+          out(`status: open to AI engineering roles`),
         ],
       };
     case "projects":
