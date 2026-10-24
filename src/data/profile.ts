@@ -50,7 +50,7 @@ export const about = {
     "I'm an AI engineer who builds systems that work in the real world — not just in notebooks. My focus is the space where generative AI meets automation: multi-agent systems that reason, retrieve, and act on their own. I've shipped voice agents that make real phone calls — booking appointments, running feedback surveys — with no human in the loop, and agentic pipelines that turned multi-hour manual processes into minutes. I work across the full stack of AI development, from prompt engineering and model integration to FastAPI backends. Off the keyboard, I build robotic arms and racing simulators — hardware fused with intelligent control.",
   facts: [
     { label: "Focus", value: "Agentic AI & Automation" },
-    { label: "Status", value: "Open to AI engineering roles" },
+    { label: "Currently", value: "FDE Intern @ Altaric Consulting" },
     { label: "Degree", value: "B.Tech AI — VJIT '26" },
     { label: "Based in", value: "Hyderabad, India" },
   ],
@@ -335,16 +335,25 @@ export type TimelineEntry = {
 
 export const timeline: TimelineEntry[] = [
   {
+    period: "August 2026 — Present",
+    title: "Forward Deployed Engineer Intern",
+    org: "Altaric Consulting, Hyderabad",
+    kind: "work",
+    points: [
+      "Part of the founding team building a social discovery app that helps people relocating to new cities or countries make friends, discover like-minded people, and find companions for local activities",
+      "Contributing to product development and technical implementation, building features that help users discover people nearby, connect over shared interests, and turn online interactions into real-world friendships",
+    ],
+  },
+  {
     period: "Feb 2026 — July 2026",
     title: "AI & Automations Intern",
     org: "Tericsoft Technology Solutions, Hyderabad",
     kind: "work",
     points: [
-      "Officially engaged as an AI & Automations Intern within Tericsoft's engineering team, developing automation workflows and intelligent agent systems for internal operations and client-facing products",
-      "Built and deployed agentic pipelines integrating LLMs, voice AI, and data platforms across multiple production projects under Tericsoft's engineering umbrella",
-      "Built an internal AI chatbot that acts as a virtual Engineering Manager with access to company-wide engineering data, used by the CTO to understand team performance and manage the entire engineering organization",
-      "Built an end-to-end n8n automation workflow that performs competitor analysis and keyword research, then auto-generates SEO-optimized blog content for publishing on the company website — reducing manual content research and drafting time",
-      "Trusted with ownership of internal AI tooling initiatives, working directly with engineering and operations stakeholders to identify, design, and deploy automation solutions used across teams",
+      "Built an AI assistant for the CTO that connects engineering data from GitHub, Jira, Keka HR, WhatsApp, and 35 BigQuery tables, making project and team insights accessible through natural-language queries",
+      "Redesigned the assistant's retrieval system, cutting response times from 15–20 seconds to 2–3 seconds while reducing AI inference costs",
+      "Independently built an end-to-end n8n SEO automation workflow that researches competitor pages, identifies and evaluates keywords, generates an editable blog checklist for human review, and produces blog content after approval",
+      "Integrated multiple LLMs, voice AI platforms, APIs, and business tools to automate workflows across internal operations and client-facing projects",
     ],
   },
 ];
