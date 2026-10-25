@@ -13,10 +13,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const FOCUS = ["LLMs", "RAG", "Voice AI", "n8n Agentic Workflows"];
 
-export default function Timeline() {
+function TimelineCard({ job }: { job: (typeof timeline)[number] }) {
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
-  const job = timeline[0];
 
   // cursor-tracking spotlight + tilt
   const mx = useMotionValue(-400);
@@ -45,78 +44,88 @@ export default function Timeline() {
   };
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 0.6 }}
+      style={{ perspective: 1400 }}
+    >
+      <motion.div
+        ref={ref}
+        onMouseMove={onMove}
+        onMouseLeave={onLeave}
+        style={{ rotateX: rx, rotateY: ry }}
+        className="group relative overflow-hidden rounded-2xl border border-line bg-panel"
+      >
+        {/* cursor spotlight */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{ background: spotlight }}
+        />
+        {/* border glow that follows the cursor */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            background: borderGlow,
+            WebkitMask:
+              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+            padding: "1px",
+          }}
+        />
+
+        <div className="relative p-8 md:p-12">
+          <p className="font-mono text-xs tracking-[0.22em] text-coral uppercase">
+            {job.period}
+          </p>
+
+          <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight text-ink md:text-5xl">
+            {job.title}
+          </h3>
+          <p className="mt-2 font-mono text-sm text-muted">{job.org}</p>
+
+          <ul className="mt-8 max-w-3xl space-y-3">
+            {job.points.map((pt) => (
+              <li
+                key={pt}
+                className="flex gap-3 text-[0.95rem] leading-relaxed text-ink/80"
+              >
+                <span className="mt-0.5 shrink-0 font-mono text-coral">—</span>
+                {pt}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {FOCUS.map((f) => (
+              <span
+                key={f}
+                className="rounded-md border border-line bg-panel-2 px-3 py-1.5 font-mono text-xs text-muted transition-colors group-hover:border-coral/25"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+export default function Timeline() {
+  return (
     <section id="log" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
       <SectionHeading index="02" label="where the work happens" title="Experience" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-10%" }}
-        transition={{ duration: 0.6 }}
-        style={{ perspective: 1400 }}
-      >
-        <motion.div
-          ref={ref}
-          onMouseMove={onMove}
-          onMouseLeave={onLeave}
-          style={{ rotateX: rx, rotateY: ry }}
-          className="group relative overflow-hidden rounded-2xl border border-line bg-panel"
-        >
-          {/* cursor spotlight */}
-          <motion.div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{ background: spotlight }}
-          />
-          {/* border glow that follows the cursor */}
-          <motion.div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{
-              background: borderGlow,
-              WebkitMask:
-                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-              WebkitMaskComposite: "xor",
-              maskComposite: "exclude",
-              padding: "1px",
-            }}
-          />
-
-          <div className="relative p-8 md:p-12">
-            <p className="font-mono text-xs tracking-[0.22em] text-coral uppercase">
-              {job.period}
-            </p>
-
-            <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight text-ink md:text-5xl">
-              {job.title}
-            </h3>
-            <p className="mt-2 font-mono text-sm text-muted">{job.org}</p>
-
-            <ul className="mt-8 max-w-3xl space-y-3">
-              {job.points.map((pt) => (
-                <li
-                  key={pt}
-                  className="flex gap-3 text-[0.95rem] leading-relaxed text-ink/80"
-                >
-                  <span className="mt-0.5 shrink-0 font-mono text-coral">—</span>
-                  {pt}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 flex flex-wrap gap-2">
-              {FOCUS.map((f) => (
-                <span
-                  key={f}
-                  className="rounded-md border border-line bg-panel-2 px-3 py-1.5 font-mono text-xs text-muted transition-colors group-hover:border-coral/25"
-                >
-                  {f}
-                </span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
+      <div className="space-y-8">
+        {timeline.map((job) => (
+          <TimelineCard key={job.org + job.period} job={job} />
+        ))}
+      </div>
     </section>
   );
 }
