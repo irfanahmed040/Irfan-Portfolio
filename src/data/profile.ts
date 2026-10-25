@@ -331,6 +331,7 @@ export type TimelineEntry = {
   org: string;
   kind: "work" | "research" | "education" | "leadership" | "certification";
   points: string[];
+  tags: string[];
 };
 
 export const timeline: TimelineEntry[] = [
@@ -342,6 +343,14 @@ export const timeline: TimelineEntry[] = [
     points: [
       "Part of the founding team building a social discovery app that helps people relocating to new cities or countries make friends, discover like-minded people, and find companions for local activities",
       "Contributing to product development and technical implementation, building features that help users discover people nearby, connect over shared interests, and turn online interactions into real-world friendships",
+    ],
+    tags: [
+      "Product Planning",
+      "Development",
+      "Debugging",
+      "Testing",
+      "Deployment",
+      "Team Coordination",
     ],
   },
   {
@@ -355,5 +364,6 @@ export const timeline: TimelineEntry[] = [
       "Independently built an end-to-end n8n SEO automation workflow that researches competitor pages, identifies and evaluates keywords, generates an editable blog checklist for human review, and produces blog content after approval",
       "Integrated multiple LLMs, voice AI platforms, APIs, and business tools to automate workflows across internal operations and client-facing projects",
     ],
+    tags: ["LLMs", "RAG", "Voice AI", "n8n Agentic Workflows"],
   },
 ];

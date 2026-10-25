@@ -11,8 +11,6 @@ import {
 import { timeline } from "@/data/profile";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const FOCUS = ["LLMs", "RAG", "Voice AI", "n8n Agentic Workflows"];
-
 function TimelineCard({ job }: { job: (typeof timeline)[number] }) {
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
@@ -101,7 +99,7 @@ function TimelineCard({ job }: { job: (typeof timeline)[number] }) {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-2">
-            {FOCUS.map((f) => (
+            {job.tags.map((f) => (
               <span
                 key={f}
                 className="rounded-md border border-line bg-panel-2 px-3 py-1.5 font-mono text-xs text-muted transition-colors group-hover:border-coral/25"
